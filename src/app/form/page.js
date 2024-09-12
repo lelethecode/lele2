@@ -2,8 +2,10 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation'
 
-const ContactForm = ({ existingContact = {}, updateCallback }) => {
+const ContactForm = () => {
     const [contacts, setContacts] = useState([]);
+    const [existingContact, setCurrentContact] = useState({});
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [username, setUsername] = useState(existingContact.username || "");
     const [email, setEmail] = useState(existingContact.email || "");
     const [man, setMan] = useState(existingContact.man || "");
@@ -28,6 +30,26 @@ const ContactForm = ({ existingContact = {}, updateCallback }) => {
         } catch (e) {
             console.log("clm", e)
         }
+      };
+
+      const updateCallback = () => {
+        CloseModal();
+        fetchContacts();
+      };
+    
+      const CloseModal = () => {
+        setIsModalOpen(false);
+        setCurrentContact({});
+      };
+    
+      const openmodal = () => {
+        if (!isModalOpen) setIsModalOpen(true);
+      };
+    
+      const openEditModal = (contact) => {
+        if (isModalOpen) return;
+        setCurrentContact(contact);
+        setIsModalOpen(true);
       };
 
     const onSubmit = async (e) => {
