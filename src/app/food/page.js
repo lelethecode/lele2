@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 
-const FoodForm = ({updateCallback }) => {
+const FoodForm = () => {
     const [username, setUsername] = useState("");
     const [man, setMan] = useState(0);
     const [ngot, setNgot] = useState(0);
