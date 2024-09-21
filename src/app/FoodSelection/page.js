@@ -9,7 +9,7 @@ function FoodSelection() {
 
     // Fetch the list of food when the component mounts
     useEffect(() => {
-        fetch('/get_food_list')  // Correct the endpoint to match your Flask route
+        fetch('https://app-cjhj.onrender.com/get_food_list')  // Correct the endpoint to match your Flask route
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
