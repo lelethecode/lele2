@@ -12,8 +12,8 @@ const SlideBar = () => {
 
   const handleLogin = () => router.push("/form");
   const handleRegister = () => router.push("/form");
-  const handleFoodSelection = () => router.push("/food-selection");
-  const handleSelectedFood = () => router.push("/selected-food");
+  const handleFoodSelection = () => router.push("/FoodSelection");
+  const handleSelectedFood = () => router.push("/FoodSelection");
   const home = () => router.push("/home");
 
   return (

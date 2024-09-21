@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 
-const FoodSelection = () => {
+const food_choose = () => {
   const [foodList, setFoodList] = useState([]);
 
   // Fetch the food list when the component loads
   useEffect(() => {
-    fetch('/api/foodlist')
+    fetch('/foodlist')
       .then((res) => res.json())
       .then((data) => {
         // Assume 'data' is an array of food objects with 'name' and 'image' fields
@@ -32,4 +34,4 @@ const FoodSelection = () => {
   );
 };
 
-export default FoodSelection;
+export default food_choose;
