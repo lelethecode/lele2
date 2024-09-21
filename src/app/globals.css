@@ -32,8 +32,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: flex;
+  height: flex;
 }
 
 h1 {
@@ -210,8 +210,10 @@ button:focus-visible {
   padding: 20px;
   font-size: 20px;
   border-radius: 10px;
-  height: 500px;
-  width: 400px;
+  height: 1fr;
+  width: 1fr;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .buttons:hover {
@@ -240,7 +242,8 @@ button:focus-visible {
 
 #submitbut{
   margin-top: 100px;
-  width: 100%;
+  width: 1fr;
+  min-width: 90px;
 }
 
 .drop1 .flavour .c {
@@ -550,5 +553,27 @@ font-family: Roboto,Arial;
   margin-left: 100px;
   margin-right: 100px;
   background: linear-gradient(40deg, rgb(123, 0, 255) 0%, rgb(35, 216, 233) 100%);
+}
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+}
+
+.food-image {
+  width: 100px;
+  height: 100px;
+}
+
+.selected-food {
+  margin-top: 20px;
+  font-size: 18px;
 }
 
