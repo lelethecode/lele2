@@ -566,14 +566,31 @@ font-family: Roboto,Arial;
   cursor: pointer;
   text-align: center;
 }
-
-.food-image {
-  width: 100px;
-  height: 100px;
+.food-selection-page {
+  text-align: center;
+  padding: 20px;
 }
 
-.selected-food {
-  margin-top: 20px;
+.food-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-item {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.food-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-item p {
+  margin-top: 10px;
   font-size: 18px;
 }
 

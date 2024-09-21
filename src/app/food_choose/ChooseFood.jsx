@@ -1,41 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
-const ChooseFood = () => {
-    const [foodList, setFoodList] = useState([]);
-    const [selectedFood, setSelectedFood] = useState(null);
+const FoodSelection = () => {
+  const [foodList, setFoodList] = useState([]);
 
-    // Fetch food list from backend
-    useEffect(() => {
-        fetch('/foodlist')  // Adjust endpoint based on your setup
-            .then(response => response.json())
-            .then(data => setFoodList(data))
-            .catch(error => console.error('Error fetching food list:', error));
-    }, []);
+  // Fetch the food list when the component loads
+  useEffect(() => {
+    fetch('/api/foodlist')
+      .then((res) => res.json())
+      .then((data) => {
+        // Assume 'data' is an array of food objects with 'name' and 'image' fields
+        setFoodList(data);
+      });
+  }, []);
 
-    const handleFoodSelection = (food) => {
-        setSelectedFood(food);
-        // Additional logic to handle the selection, like sending it to the backend
-        // to update the user's favorite food.
-    };
+  const handleFoodSelect = (food) => {
+    console.log('Selected food:', food);
+    // You can implement logic here to handle the selected food
+  };
 
-    return (
-        <div>
-            <h1>Select Your Favorite Food</h1>
-            <div className="food-list">
-                {foodList.map(food => (
-                    <div key={food.id} className="food-item" onClick={() => handleFoodSelection(food)}>
-                        <img src={food.image_url} alt={food.name} className="food-image" />
-                        <p>{food.name}</p>
-                    </div>
-                ))}
-            </div>
-            {selectedFood && (
-                <div className="selected-food">
-                    <h2>You selected: {selectedFood.name}</h2>
-                </div>
-            )}
-        </div>
-    );
+  return (
+    <div className="food-selection-page">
+      <h1>Chọn Món</h1>
+      <div className="food-grid">
+        {foodList.map((food) => (
+          <div key={food.id} className="food-item" onClick={() => handleFoodSelect(food)}>
+            <p>{food.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default ChooseFood;
+export default FoodSelection;
