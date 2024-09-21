@@ -1,41 +1,47 @@
 'use client'
-import React, { useState } from "react"
-import { useRouter } from 'next/navigation'
+import React, { useState } from "react";
+import { useRouter } from 'next/navigation';
 
+const SlideBar = () => {
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-const SlideBar = ({contacts}) => {
-    const router = useRouter()
-    const [gtC, setGTC] = useState(false)
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    function e() {
-        router.push("/form");
-    }
-    function chonmon() {
-        router.push("/form");
-    }
-    function monandachon() {
-        router.push("/form");
-    }
-    function home() {
-        router.push("/form");
-    }
-    return <div>
-        <div className = "containerbox">
-            <img src="/images/logo.png" className = "faslogo" id = "ex-mar"/>
-            <h2 className = "logotitle">FAS</h2>
-            <span className = "divider" id = "ex-mar"></span>
+  const handleLogin = () => router.push("/form");
+  const handleRegister = () => router.push("/form");
+  const handleFoodSelection = () => router.push("/food-selection");
+  const handleSelectedFood = () => router.push("/selected-food");
+  const home = () => router.push("/home");
 
-            <div id = "ex-mar" className = "formbuttons">
-                <button className = "buttons" onClick={e}>Đăng nhập</button>
-                <button className = "buttons" onClick={e}>Đăng ký</button>
-                <button className = "buttons" onClick={e}>Chọn Món</button>
-                <button className = "buttons" onClick={e}>Món ăn bạn đã chọn</button>
-                <button className = "buttons" onClick={e}>Trang Chủ</button>
-            </div>
+  return (
+    <div>
+      <div className="containerbox">
+        <img src="/images/logo.png" className="faslogo" id="ex-mar" alt="Logo" />
+        <h2 className="logotitle">FAS</h2>
+        <span className="divider" id="ex-mar"></span>
+        <div className="navbar">
+          <button
+            className="hamburger"
+            onClick={toggleMenu}
+            aria-expanded={menuOpen}
+            aria-controls="button-bar"
+          >
+            ☰
+          </button>
+          <div className={`button-bar ${menuOpen ? 'open' : ''}`} id="button-bar">
+            <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
+            <button className="buttons" onClick={handleRegister}>Đăng ký</button>
+            <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
+            <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
+            <button className="buttons" onClick={home}>Trang Chủ</button>
+          </div>
         </div>
-        
+      </div>
     </div>
-    
-}
+  );
+};
 
-export default SlideBar
+export default SlideBar;
