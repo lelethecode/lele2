@@ -10,7 +10,7 @@ const SlideBar = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleLogin = () => router.push("/form");
+  const handleLogin = () => router.push("/login");
   const handleRegister = () => router.push("/form");
   const handleFoodSelection = () => router.push("/FoodSelection");
   const handleSelectedFood = () => router.push("/FoodSelection");

@@ -34,7 +34,7 @@ const ContactForm = () => {
 
       const updateCallback = () => {
         CloseModal();
-        fetchContacts();
+        //fetchContacts();
       };
     
       const CloseModal = () => {
@@ -98,7 +98,7 @@ const ContactForm = () => {
                 alert(errorData.message || "Something went wrong!");
             } else {
                 updateCallback();
-                router.push('/drop');
+                router.push('/home');
             }
         } catch (error) {
             console.error('Error:', error);
