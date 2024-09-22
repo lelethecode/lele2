@@ -1,10 +1,12 @@
 // src/LoginPage.jsx
 
-'use client'
+'use client';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
-const login = () => {
+const LoginPage = () => {
+  const router = useRouter(); // Initialize the router
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -13,10 +15,15 @@ const login = () => {
     event.preventDefault();
     try {
       const response = await axios.post('https://app-cjhj.onrender.com/login', {
-        username: username,  
+        username: username,
         password: password,
       });
       setMessage(response.data.message);
+      
+      // Redirect to the user page on successful login
+      if (response.data.success) { // Assuming the response has a success flag
+        router.push('/user'); // Change '/user' to your actual user page route
+      }
     } catch (error) {
       setMessage(error.response.data.message);
     }
@@ -43,4 +50,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default LoginPage;
