@@ -22,7 +22,8 @@ const LoginPage = () => {
       
       // Redirect to the user page on successful login
       if (response.data.success) { // Assuming the response has a success flag
-        router.push('/user'); // Change '/user' to your actual user page route
+        localStorage.setItem('user', JSON.stringify(response.data.user)); // Store user data
+        router.push('/user'); // Change '/uwser' to your actual user page route
       }
     } catch (error) {
       setMessage(error.response.data.message);
