@@ -16,7 +16,7 @@ const LoginPage = () => {
     try {
       const response = await axios.post('https://app-cjhj.onrender.com/login', {
         username: username,
-        password: password,
+        password: password, 
       });
       setMessage(response.data.message);
       
