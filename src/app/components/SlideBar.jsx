@@ -50,9 +50,10 @@ const SlideBar = () => {
           >
             ☰
           </button>
+            <>
             <div className="greeting">Welcome, {user.name}</div> {/* Adjust based on your user data structure */}
                   <button className="buttons" onClick={handleLogout}>Logout</button>
-              </>
+            </>
             ) : (
               <>
                 <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
