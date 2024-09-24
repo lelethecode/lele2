@@ -51,7 +51,7 @@ function FoodSelection() {
         }
 
         // Send the selected food for all days to the backend
-        fetch('http://192.168.1.134:5000/choose_food', {
+        fetch('https://app-cjhj.onrender.com/choose_food', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
