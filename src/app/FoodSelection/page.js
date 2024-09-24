@@ -10,11 +10,12 @@ function FoodSelection() {
         wednesday: "",
         thursday: "",
         friday: ""
-    });
-    const [userId, setUserId] = useState(localStorage.getItem('user'));  // Example user ID, you can fetch this from your app's user state
-
+    });  // Example user ID, you can fetch this from your app's user state
+    const the = localStorage.getItem('user');
+    const [userId, setUserId] = useState(the);
     // Fetch the list of food when the component mounts
     useEffect(() => {
+        
         fetch('https://app-cjhj.onrender.com/get_food_list')  // Correct the endpoint to match your Flask route
             .then(response => {
                 if (!response.ok) {
