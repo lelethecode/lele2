@@ -50,7 +50,7 @@ const SlideBar = () => {
           >
             ☰
           </button>
-          <div className="greeting">Welcome, {user.name}</div> {/* Adjust based on your user data structure */}
+            <div className="greeting">Welcome, {user.name}</div> {/* Adjust based on your user data structure */}
                   <button className="buttons" onClick={handleLogout}>Logout</button>
               </>
             ) : (
@@ -62,7 +62,6 @@ const SlideBar = () => {
             <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
             <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
             <button className="buttons" onClick={home}>Trang Chủ</button>
-          </div>
         </div>
       </div>
     </div>
