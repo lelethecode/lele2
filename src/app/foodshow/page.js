@@ -18,7 +18,7 @@ const FavoriteFood = () => {
     const user_json = JSON.parse(user)
 
     // Fetch the favorite food from Flask API
-    axios.get(`https://app-cjhj.onrender.com/favorite-food?user_id=${user_json.id}`)
+    axios.get(`http://192.168.1.134:5000/favorite-food?user_id=${user_json.id}`)
       .then(response => {
         setFavoriteFood(response.data);
       })
