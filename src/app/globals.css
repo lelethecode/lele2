@@ -154,6 +154,8 @@ h1 {
   font-size: 0.8em;
   background-color: #333;
   color: white;
+  min-width: 205px;
+  min-height: 71px;
   cursor: pointer;
 }
 .hamburger {
@@ -605,6 +607,13 @@ font-family: Roboto,Arial;
   border-style: none;
   border-radius: 8px;
 }
-.navcontain{
-  position: absolute;
+.greeting{
+  background-color: #1d1d1d;
+  color: white;
+  min-width: 205px;
+  min-height: 71px;
+  border-style: none;
+  border-radius: 8px
+  
 }
+
