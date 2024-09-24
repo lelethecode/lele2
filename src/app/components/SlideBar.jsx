@@ -34,6 +34,8 @@ const SlideBar = () => {
     router.push("/login"); // Redirect to login after logout
   };
 
+  console.log(user)
+
   return (
     <div>
       <div className="containerbox">
@@ -50,10 +52,14 @@ const SlideBar = () => {
           >
             ☰
           </button>
-            <>
-            <div className="greeting">Welcome, {user.name}</div> {/* Adjust based on your user data structure */}
+          <div className={`button-bar ${menuOpen ? 'open' : ''}`} id="button-bar">
+            {user ? (
+              <>
+                <div className="user-info">
+                  <div>Welcome, {user.username}</div> {/* Adjust based on your user data structure */}
                   <button className="buttons" onClick={handleLogout}>Logout</button>
-            </>
+                </div>
+              </>
             ) : (
               <>
                 <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
@@ -63,6 +69,7 @@ const SlideBar = () => {
             <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
             <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
             <button className="buttons" onClick={home}>Trang Chủ</button>
+          </div>
         </div>
       </div>
     </div>

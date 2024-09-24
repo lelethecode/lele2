@@ -15,7 +15,7 @@ function FoodSelection() {
 
     // Fetch the list of food when the component mounts
     useEffect(() => {
-        fetch('https://app-cjhj.onrender.com/get_food_list')  // Correct the endpoint to match your Flask route
+        fetch('http://192.168.1.134:5000/get_food_list')  // Correct the endpoint to match your Flask route
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -51,7 +51,7 @@ function FoodSelection() {
         }
 
         // Send the selected food for all days to the backend
-        fetch('/choose_food', {
+        fetch('http://192.168.1.134:5000/choose_food', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -84,8 +84,8 @@ function FoodSelection() {
                         >
                             <option value="">--Select a Food--</option>
                             {foodList.map(food => (
-                                <option key={food.id} value={food.id}>
-                                    {food.name}
+                                <option key={food.id} value={food.username}>
+                                {food.name}
                                 </option>
                             ))}
                         </select>

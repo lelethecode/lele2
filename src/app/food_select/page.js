@@ -50,7 +50,7 @@ function FoodSelection() {
         }
 
         // Send selected food and day check values to the backend
-        fetch('/choose_food', {
+        fetch('https://app-cjhj.onrender.com/choose_food', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

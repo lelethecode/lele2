@@ -14,10 +14,11 @@ const FavoriteFood = () => {
 
   useEffect(() => {
     // Assuming user ID is stored in localStorage or passed through a session
-    const userId = localStorage.getItem('user_id');
+    const user = localStorage.getItem('user');
+    const user_json = JSON.parse(user)
 
     // Fetch the favorite food from Flask API
-    axios.get(`/api/favorite-food?user_id=${userId}`)
+    axios.get(`http://192.168.1.134:5000/favorite-food?user_id=${user_json.id}`)
       .then(response => {
         setFavoriteFood(response.data);
       })
