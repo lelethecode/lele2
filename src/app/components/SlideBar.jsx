@@ -16,7 +16,7 @@ const SlideBar = () => {
   const handleLogin = () => router.push("/login");
   const handleRegister = () => router.push("/form");
   const handleFoodSelection = () => router.push("/FoodSelection");
-  const handleSelectedFood = () => router.push("/FoodSelection");
+  const handleSelectedFood = () => router.push("/foodshow");
   const home = () => router.push("/home");
 
   // Load user information from local storage
@@ -54,7 +54,7 @@ const SlideBar = () => {
             {user ? (
               <>
                 <div className="user-info">
-                  <p>Welcome, {user.name}</p> {/* Adjust based on your user data structure */}
+                  <div>Welcome, {user.name}</div> {/* Adjust based on your user data structure */}
                   <button className="buttons" onClick={handleLogout}>Logout</button>
                 </div>
               </>
