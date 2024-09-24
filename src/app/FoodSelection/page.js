@@ -11,7 +11,7 @@ function FoodSelection() {
         thursday: "",
         friday: ""
     });
-    const [userId, setUserId] = useState(1);  // Example user ID, you can fetch this from your app's user state
+    const [userId, setUserId] = useState(localStorage.getItem('user'));  // Example user ID, you can fetch this from your app's user state
 
     // Fetch the list of food when the component mounts
     useEffect(() => {
