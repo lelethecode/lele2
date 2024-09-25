@@ -11,7 +11,15 @@ function FoodSelection() {
         thursday: "",
         friday: ""
     });  
-    const [userId,setUserId] = useState(localStorage.getItem('user'));
+    const [userId,setUserId] = useState(null);
+    useEffect(() => {
+        const storedUserId = localStorage.getItem('user');
+        if (storedUserId) {
+            setUserId(storedUserId);
+        } else {
+            console.error("User ID not found in localStorage");
+        }
+    }, []);
     // Example user ID, you can fetch this from your app's user state
     
     // useEffect(() => {
