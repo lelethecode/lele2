@@ -11,7 +11,7 @@ const FavoriteFood = () => {
     t5: null,
     t6: null,
   });
-
+  
   useEffect(() => {
     // Assuming user ID is stored in localStorage or passed through a session
     const user = localStorage.getItem('user');

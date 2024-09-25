@@ -10,8 +10,10 @@ function FoodSelection() {
         wednesday: "",
         thursday: "",
         friday: ""
-    });  // Example user ID, you can fetch this from your app's user state
-    const [userId, setUserId] = (1);
+    });  
+    const [userId,setUserId] = useState(localStorage.getItem('user'));
+    // Example user ID, you can fetch this from your app's user state
+    
     // useEffect(() => {
     //     const storedUserId = localStorage.getItem('user');
     //     if (storedUserId) {
@@ -23,7 +25,7 @@ function FoodSelection() {
     // Fetch the list of food when the component mounts
     useEffect(() => {
         if (userId) { // Ensure userId is available before making the request
-            fetch(`https://app-cjhj.onrender.com/get_food_list?user_id=${userId}`)  // Correct the endpoint to match your Flask route
+            fetch(`https://app-cjhj.onrender.com/get_food_list`)  // Correct the endpoint to match your Flask route
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
