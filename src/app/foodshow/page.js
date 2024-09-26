@@ -28,7 +28,7 @@ const FavoriteFood = () => {
   }, []);
 
   return (
-    <div className="food-select">
+    <div className="selection">
       <h1>Favorite Food for the Week</h1>
       <ul>
         <li>Tuesday (T2): {favoriteFood.t2}</li>
