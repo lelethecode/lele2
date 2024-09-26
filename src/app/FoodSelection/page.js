@@ -10,27 +10,46 @@ function FoodSelection() {
         wednesday: "",
         thursday: "",
         friday: ""
-    });
-    const [userId, setUserId] = useState(1);  // Example user ID, you can fetch this from your app's user state
-
+    });  
+    const [userId,setUserId] = useState(null);
+    useEffect(() => {
+        const storedUserId = localStorage.getItem('user');
+        if (storedUserId) {
+            setUserId(storedUserId);
+        } else {
+            console.error("User ID not found in localStorage");
+        }
+    }, []);
+    // Example user ID, you can fetch this from your app's user state
+    
+    // useEffect(() => {
+    //     const storedUserId = localStorage.getItem('user');
+    //     if (storedUserId) {
+    //         setUserId(storedUserId);
+    //     } else {
+    //         console.error("User ID not found in localStorage");
+    //     }
+    // }, []);
     // Fetch the list of food when the component mounts
     useEffect(() => {
-        fetch('https://app-cjhj.onrender.com/get_food_list')  // Correct the endpoint to match your Flask route
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.length > 0) {
-                    setFoodList(data);
-                } else {
-                    console.log('No food items found');
-                }
-            })
-            .catch(error => console.error('There was a problem with the fetch operation:', error));
-    }, []);
+        if (userId) { // Ensure userId is available before making the request
+            fetch(`https://app-cjhj.onrender.com/get_food_list`)  // Correct the endpoint to match your Flask route
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.length > 0) {
+                        setFoodList(data);
+                    } else {
+                        console.log('No food items found');
+                    }
+                })
+                .catch(error => console.error('There was a problem with the fetch operation:', error));
+        }
+    }, [userId]); 
 
     const handleChange = (day, value) => {
         setSelectedFoods(prevState => ({
