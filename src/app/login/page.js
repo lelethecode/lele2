@@ -38,12 +38,14 @@ const LoginPage = () => {
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        className="food-select"
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        className="food-select"
       />
       <button onClick={handleLogin} className="login-but">Login</button>
       <p>{message}</p>
