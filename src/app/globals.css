@@ -690,4 +690,16 @@ font-family: Roboto,Arial;
 }
 .login-but{
   margin-left: 5px;
+  color: #ffff;
+  background-color: #c9000c;
+  border-style: none;
+  border-radius: 5px;
+}
+.login-but:hover{
+  border-style: solid;
+  border-color: #ffff;
+}
+.login-but:active{
+  background-color: #ffff;
+  color: #c9000c;
 }
