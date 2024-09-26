@@ -3,8 +3,8 @@
   font-family:"Mitr", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(37deg, rgb(63, 4, 105) 0%, rgba(226,168,19,1) 100%);
+  color: rgb(221, 21, 21);
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,10 +28,12 @@ a:hover {
 
 body {
   margin: 0;
+  background-color: rgb(223 223 225);
   display: flex;
+  position: fixed;
   place-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -67,16 +69,22 @@ h1 {
   }
 }
 .faslogo{
-  height: 3em;
-  top: 5px;
+  height: 60px;
+  border-radius: 5px;
+  border-style: none;
   align-self: center;
-  padding-left: 10px;
+  justify-self: center;
+  margin-left: 10px;
+  margin-top: 0px;
 }
 .logotitle{
   margin-left: 10px; 
   font-weight: 400;
   align-self: center;
-  font-size: 40px;
+  min-width: 380px;
+  justify-self: left;
+  color: white;     
+  font-size: 30px;
 }
 
 .divider{
@@ -88,18 +96,15 @@ h1 {
 
 .containerbox{
   display: flex;
-  background-color:rgb(23, 23, 23);
+  background-color:#c9000c;
   position: absolute;
+  justify-content: space-between;
   top: 0%;
+  /* justify-content: space-between; */
   width: 100%;
   height:75px;
   left:0%;
 }
-
-#ex-mar{
-  margin-top: 4px;
-}
-
 /* .buttons {
   margin-left: 10px;
   border-radius: 8px;
@@ -116,26 +121,51 @@ h1 {
 
 .navbar {
   position: relative;
-  background-color: #212121;
+  background-color: #c9000c;
   padding: 10px;
+  border-style: none;
+  min-width: 200px;
+  margin: 0;
 }
 
 .hamburger {
-  display: none; /* Hidden by default */
+  display: flex; /* Hidden by default */
   font-size: 24px;
   position: relative;
-  top: 5px;
+  align-items: center;
+  justify-self: start;
+  justify-content: center;
   background: none;
-  border: none;
+  justify-self: start;
+  top:5px;
+  margin-left: 180px;
+  border-color:#ffff;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
+}
+.hamburger:focus {
+  background-color:rgb(255, 255, 255);
+  color: #c9000c;
 }
 
 .button-bar {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   justify-content: center;
+  align-items: center ;
   gap: 5px;
+  padding-top: 5px;
+  width: 210px;
+  border-radius: 10px;
+  background-color:#ffffff;
+  position: relative;
+  padding-bottom:10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 10px;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add opacity transition */
   max-height: 0; /* Initially hidden */
   opacity: 0; /* Initially hidden */
@@ -146,20 +176,19 @@ h1 {
   max-height: 500px; /* Adjust as necessary */
   opacity: 1; /* Show when open */
 }
-
 .buttons {
-  margin: 5px;
+  margin: 0;
   border-radius: 8px;
   padding: 0.5em 1em;
   font-size: 0.8em;
   background-color: #333;
   color: white;
   min-width: 205px;
-  min-height: 71px;
+  min-height: 50px;
   cursor: pointer;
 }
 .hamburger {
-  display: inline-block; /* Show hamburger on small screens */
+  display: flex; /* Show hamburger on small screens */
 }
 /* Hamburger menu visible on smaller screens */
 @media (max-width: 1500px) {
@@ -169,14 +198,12 @@ h1 {
     max-height: 0; /* Initially hidden */
     overflow: hidden;
   }
-
   .button-bar.open {
     max-height: 500px; /* Slide down effect */
   }
 }
 button:hover {
-  border-color: rgba(226,168,19,1);
-  transform: scale(1.05)
+  border-color: #ffff;
 }
 
 button:focus,
@@ -213,25 +240,11 @@ button:focus-visible {
     transform: rotate(360deg);
   }
 }
-.faslogo{
-  height: 3em;
-  top: 5px;
-}
-.logotitle{
-  margin-left: 10px; 
-  font-weight: 400;
-  font-size: 40px;
-}
-
 .divider{
   height: 80%;
   margin-left: 20px; 
   border: 2px solid rgb(51, 51, 51);
   border-radius: 3px;
-}
-
-#ex-mar{
-  margin-top: 4px;
 }
 
 .formbuttons{
@@ -240,14 +253,16 @@ button:focus-visible {
 }
 
 .buttons {
-  margin-right: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 400;
+  margin-top: 0px;
+  min-width: 205px;
+  margin-bottom: 0px;
   font-family: inherit;
-  background-color: #1d1d1d;
+  background-color: #c9000c;
   cursor: pointer;
   transition: 0.25s;
 }
@@ -264,7 +279,7 @@ button:focus-visible {
 }
 
 .buttons:hover {
-  border-color: rgba(226,168,19,1);
+  border-color: rgb(255, 255, 255);
   transform: scale(1.05)
 }
 
@@ -390,7 +405,6 @@ font-family: Roboto,Arial;
 }
 
 .header{
-  background: linear-gradient(37deg, rgba(71, 4, 126, 0.893) 0%, rgba(222, 171, 6, 0.745) 100%);
   display: flex;
   flex: 1;
   min-width: 650px;
@@ -405,11 +419,6 @@ font-family: Roboto,Arial;
   top: 0;
   left: 0;
   width: 100%;
-}
-.left-section,
-.right-section{
-  align-items: center;
-  display: flex;
 }
 .middle-section{
   align-items: center;
@@ -518,7 +527,7 @@ font-family: Roboto,Arial;
 }
 .left-section{
   display: flex;
-  flex-direction: rowS;
+  flex-direction: row;
 }
 .web-logo{
   height: 100%;
@@ -558,8 +567,8 @@ font-family: Roboto,Arial;
   }
 }
 .menu-button:active{
-  border-style: none;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  color:red;
   transition-duration: 0.01s;
 }
 .menu-inside{
@@ -608,12 +617,74 @@ font-family: Roboto,Arial;
   border-radius: 8px;
 }
 .greeting{
-  background-color: #1d1d1d;
+  background-color: #c9000c;
   color: white;
+  font-weight: 900;
+  font-size: 20px ;
   min-width: 205px;
-  min-height: 71px;
+  min-height: 55px;
+  position : relative;
+  margin-bottom: 8px;
+  border-style: solid;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.left-section{
+  align-self: center;
+  height: 75px;
+  margin:0;
+}
+.hello-txt{
+  background-color:#c9000c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.chao{
+  width: auto;
+  color: #ffff;
+  text-align: center;
+}
+.selection{
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.submit-but{
+  color: #ffff;
+  background-color: #c9000c;
   border-style: none;
-  border-radius: 8px
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+.submit-but:hover{
+  border-style: solid;
+  border-color: #ffff;
+}
+.submit-but:active{
+  background-color: #ffff;
+  color: #c9000c;
+}
+.food-select{
+  margin-left: 5px;
+  font-family:Arial;
+  font-size: 14px;
+  border-radius: 5px;
   
 }
-
+.food-select-selected{
+  background-color: DodgerBlue;
+}

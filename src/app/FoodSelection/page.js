@@ -71,7 +71,7 @@ function FoodSelection() {
     };
 
     return (
-        <div>
+        <div className="selection">
             <h2>Select Your Favorite Food for Each Day</h2>
             <form onSubmit={handleSubmit}>
                 {["monday", "tuesday", "wednesday", "thursday", "friday"].map(day => (
@@ -81,6 +81,7 @@ function FoodSelection() {
                             id={day}
                             value={selectedFoods[day]}
                             onChange={(e) => handleChange(day, e.target.value)}
+                            className="food-select"
                         >
                             <option value="">--Select a Food--</option>
                             {foodList.map(food => (
@@ -92,7 +93,7 @@ function FoodSelection() {
                         <br />
                     </div>
                 ))}
-                <button type="submit">Submit</button>
+                <button type="submit" className="submit-but">Submit</button>
             </form>
         </div>
     );
