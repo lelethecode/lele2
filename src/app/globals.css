@@ -688,3 +688,6 @@ font-family: Roboto,Arial;
 .food-select-selected{
   background-color: DodgerBlue;
 }
+.login-but{
+  margin-left: 5px;
+}
