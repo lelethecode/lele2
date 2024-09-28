@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 function FoodSelection() {
     const [foodList, setFoodList] = useState([]);
+    
     const [selectedFoods, setSelectedFoods] = useState({
         monday: "",
         tuesday: "",
