@@ -50,7 +50,7 @@ function FoodSelection() {
         }
 
         // Send selected food and day check values to the backend
-        fetch('http://192.168.1.183:5000/choose_food_week', {
+        fetch('https://app-cjhj.onrender.com/choose_food_week', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
