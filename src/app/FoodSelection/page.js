@@ -4,7 +4,13 @@ import React, { useState, useEffect } from 'react';
 
 function FoodSelection() {
     const [foodList, setFoodList] = useState([]);
-    const [filteredFoodList, setFilteredFoodList] = useState([]);
+    const [filteredFoodLists, setFilteredFoodLists] = useState({
+        monday: [],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: []
+    });
     const [selectedFoods, setSelectedFoods] = useState({
         monday: "",
         tuesday: "",
@@ -36,37 +42,21 @@ function FoodSelection() {
                 .then(data => {
                     if (data.length > 0) {
                         setFoodList(data);
+                        // Filter food for each day based on the check value
+                        setFilteredFoodLists({
+                            monday: data.filter(food => food.check === 2),
+                            tuesday: data.filter(food => food.check === 3),
+                            wednesday: data.filter(food => food.check === 4),
+                            thursday: data.filter(food => food.check === 5),
+                            friday: data.filter(food => food.check === 6)
+                        });
                     } else {
                         console.log('No food items found');
                     }
                 })
                 .catch(error => console.error('There was a problem with the fetch operation:', error));
         }
-    }, [userId]); 
-
-    // Filter food options based on the day and check value
-    useEffect(() => {
-        const checkValues = {
-            monday: 2,
-            tuesday: 3,
-            wednesday: 4,
-            thursday: 5,
-            friday: 6
-        };
-        
-        // Get the selected day from the state
-        const day = Object.keys(selectedFoods).find(day => selectedFoods[day] === "");
-
-        // If a day is found, filter the food list based on its check value
-        if (day) {
-            const checkValue = checkValues[day];
-            const filteredFoods = foodList.filter(food => food.check === checkValue);
-            setFilteredFoodList(filteredFoods);
-        } else {
-            // If all days are filled, show all food options
-            setFilteredFoodList(foodList);
-        }
-    }, [foodList, selectedFoods]);
+    }, [userId]);
 
     const handleChange = (day, value) => {
         setSelectedFoods(prevState => ({
@@ -120,9 +110,9 @@ function FoodSelection() {
                             className="food-select"
                         >
                             <option value="">--Select a Food--</option>
-                            {filteredFoodList.map(food => (
+                            {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
-                                    {food.name}
+                                    {food.username}
                                 </option>
                             ))}
                         </select>
