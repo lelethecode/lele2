@@ -112,7 +112,7 @@ function FoodSelection() {
                             <option value="">--Select a Food--</option>
                             {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
-                                    {food.username}
+                                    {food.name}
                                 </option>
                             ))}
                         </select>
