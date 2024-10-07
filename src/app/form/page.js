@@ -107,7 +107,7 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="selection">
             <div>
                 <label htmlFor="username">Username:</label>
                 <input
@@ -115,6 +115,7 @@ const ContactForm = () => {
                     id="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    className="food-select"
                 />
             </div>
             <div>
@@ -124,6 +125,7 @@ const ContactForm = () => {
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                     className="food-select"
                 />
             </div>
             <div>
@@ -133,6 +135,7 @@ const ContactForm = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                     className="food-select"
                 />
             </div>
             <div>
@@ -143,6 +146,7 @@ const ContactForm = () => {
                     value={man}
                     onChange={(e) => setMan(e.target.value)}
                     min="0" max="3" // Set min/max for user guidance
+                     className="food-select"
                 />
             </div>
             <div>
@@ -153,6 +157,7 @@ const ContactForm = () => {
                     value={ngot}
                     onChange={(e) => setngot(e.target.value)}
                     min="0" max="3"
+                     className="food-select"
                 />
             </div>
             <div>
@@ -163,9 +168,10 @@ const ContactForm = () => {
                     value={cay}
                     onChange={(e) => setCay(e.target.value)}
                     min="0" max="3"
+                    className="food-select"
                 />
             </div>
-            <button type="submit">{updating ? "Update" : "Create"}</button>
+            <button type="submit" className="login-but">{updating ? "Update" : "Create"}</button>
         </form>
     );
 };

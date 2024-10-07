@@ -124,7 +124,6 @@ h1 {
   background-color: #c9000c;
   padding: 10px;
   border-style: none;
-  min-width: 200px;
   margin: 0;
 }
 
@@ -702,4 +701,12 @@ font-family: Roboto,Arial;
 .login-but:active{
   background-color: #ffff;
   color: #c9000c;
+}
+.feedback-but{
+  height: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .logotitle {
+  display: none;
+  }
 }

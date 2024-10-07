@@ -51,7 +51,7 @@ const SlideBar = () => {
       <div className="containerbox">
         <div className="left-section">
           <img src="/images/logo.jpg" className="faslogo" id="ex-mar" alt="Logo" />
-          <h2 className="logotitle">Food Arrangment Service</h2>
+          <h2 className="logotitle">Food Arrangement Service</h2>
           {/* <span className="divider" id="ex-mar"></span> */}
         </div>
         
@@ -84,7 +84,7 @@ const SlideBar = () => {
             <button className="buttons" onClick={home}>Trang Chủ</button>
             <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
             <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
-            
+            <button className="buttons">Gửi phản hồi</button>
           </div>
         </div>
       </div>
