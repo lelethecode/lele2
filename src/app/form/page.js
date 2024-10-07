@@ -139,7 +139,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="man">Độ mặn từ 1 tới 3:</label>
+                <label htmlFor="man">Độ mặn từ 0 tới 100:</label>
                 <input
                     type="number" // Change to number type for input
                     id="man"
@@ -150,7 +150,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="ngot">Độ ngot:</label>
+                <label htmlFor="ngot">Độ ngot từ 0 tới 100:</label>
                 <input
                     type="number"
                     id="ngot"
@@ -161,7 +161,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="cay">Độ cay từ 1 tới 3:</label>
+                <label htmlFor="cay">Độ cay từ 0 tới 100:</label>
                 <input
                     type="number"
                     id="cay"
