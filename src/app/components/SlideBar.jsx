@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/navigation';
+import Feedback from "../feedback/page";
 
 const SlideBar = () => {
   const router = useRouter();
@@ -84,7 +85,7 @@ const SlideBar = () => {
             <button className="buttons" onClick={home}>Trang Chủ</button>
             <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
             <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
-            <button className="buttons">Gửi phản hồi</button>
+            <button className="buttons" onClick={Feedback}>Gửi phản hồi</button>
           </div>
         </div>
       </div>
