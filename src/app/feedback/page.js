@@ -41,7 +41,7 @@ function Feedback() {
         .then(response => response.json())
         .then(data => {
             alert(data.message);
-            setFeedback(''); // Clear feedback input after submission
+            setFeedback(''); 
         })
         .catch(error => {
             console.error("Error submitting feedback:", error);

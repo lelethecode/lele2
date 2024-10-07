@@ -29,6 +29,7 @@ const SlideBar = () => {
   const handleFoodSelection = () => router.push("/FoodSelection");
   const handleSelectedFood = () => router.push("/foodshow");
   const home = () => router.push("/home");
+  const Feedback = () => router.push("/feedback");
 
   // Load user information from local storage
   useEffect(() => {
