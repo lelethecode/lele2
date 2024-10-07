@@ -45,8 +45,8 @@ const FoodForm = () => {
             numrifyV = parseInt(value, 10);
         }
        
-        if (numrifyV >= 3){
-            numrifyV = 3;
+        if (numrifyV >= 100){
+            numrifyV = 100;
         }
         else if (numrifyV < 0 || isNaN(numrifyV)) {
             numrifyV = 0;

@@ -65,9 +65,9 @@ const ContactForm = () => {
         const ngotValue = parseInt(ngot);
         const cayValue = parseInt(cay);
 
-        if (isNaN(manValue) || manValue < 0 || manValue > 3 ||
-            isNaN(ngotValue) || ngotValue < 0 || ngotValue > 3 ||
-            isNaN(cayValue) || cayValue < 0 || cayValue > 3) {
+        if (isNaN(manValue) || manValue < 0 || manValue > 100 ||
+            isNaN(ngotValue) || ngotValue < 0 || ngotValue > 100 ||
+            isNaN(cayValue) || cayValue < 0 || cayValue > 100) {
             alert("Values for man, ngot, and cay must be integers between 1 and 3.");
             return;
         }
@@ -145,18 +145,18 @@ const ContactForm = () => {
                     id="man"
                     value={man}
                     onChange={(e) => setMan(e.target.value)}
-                    min="0" max="3" // Set min/max for user guidance
+                    min="0" max="100" // Set min/max for user guidance
                      className="food-select"
                 />
             </div>
             <div>
-                <label htmlFor="ngot">Độ ngot từ 1 tới 3:</label>
+                <label htmlFor="ngot">Độ ngot:</label>
                 <input
                     type="number"
                     id="ngot"
                     value={ngot}
                     onChange={(e) => setngot(e.target.value)}
-                    min="0" max="3"
+                    min="0" max="100"
                      className="food-select"
                 />
             </div>
@@ -167,7 +167,7 @@ const ContactForm = () => {
                     id="cay"
                     value={cay}
                     onChange={(e) => setCay(e.target.value)}
-                    min="0" max="3"
+                    min="0" max="100"
                     className="food-select"
                 />
             </div>
