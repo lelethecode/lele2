@@ -110,6 +110,7 @@ function FoodSelection() {
                             className="food-select"
                         >
                             <option value="">--Select a Food--</option>
+                            <option value="">Không Ăn</option>
                             {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
                                     {food.name}

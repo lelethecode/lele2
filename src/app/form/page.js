@@ -23,7 +23,7 @@ const ContactForm = () => {
 
       const fetchContacts = async () => {
         try {
-            const response = await fetch("https://app-cjhj.onrender.com/contacts");//"https://app-cjhj.onrender.com/contacts"
+            const response = await fetch("https://app-cjhj.onrender.com/contacts");
             const data = await response.json();
             setContacts(data.contacts);
             console.log(data.contacts);
