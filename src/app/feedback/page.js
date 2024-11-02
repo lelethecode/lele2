@@ -53,7 +53,7 @@ function Feedback() {
             <h2 className="feed-com">Nhập Phản Hồi</h2>
             <form onSubmit={handleSubmit}>
                 <div className ="feed-con">
-                    <label htmlFor="feedback" className = "feed-title">Feedback:</label>
+                    <label htmlFor="feedback" className = "feed-title">Ý kiến của bạn:</label>
                     <textarea
                         id="feedback"
                         value={feedback}
