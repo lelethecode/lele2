@@ -50,17 +50,18 @@ function Feedback() {
 
     return (
         <div className="feedback">
-            <h2>Submit Your Feedback</h2>
+            <h2 className="feed-com">Nhập Phản Hồi</h2>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="feedback">Feedback:</label>
+                <div className ="feed-con">
+                    <label htmlFor="feedback" className = "feed-title">Feedback:</label>
                     <textarea
                         id="feedback"
                         value={feedback}
                         onChange={handleFeedbackChange}
-                        placeholder="Your feedback..."
+                        placeholder="Phản hồi của bạn..."
                         rows="4"
                         required
+                        className="feed-sheet"
                     />
                 </div>
                 <button type="submit" className="submit-but">Submit</button>

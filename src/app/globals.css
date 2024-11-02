@@ -664,14 +664,15 @@ font-family: Roboto,Arial;
 .submit-but{
   color: #ffff;
   background-color: #c9000c;
-  border-style: none;
+  border-style: solid;
   border-radius: 5px;
+  border-color: #ffffff;
   font-size: 17px;
   margin-top: 10px;
 }
 .submit-but:hover{
-  border-style: solid;
-  border-color: #ffff;
+  
+  border-color: #000000;
 }
 .submit-but:active{
   background-color: #ffff;
@@ -709,4 +710,34 @@ font-family: Roboto,Arial;
   .logotitle {
   display: none;
   }
+}
+.feedback{
+  background-color:#ffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.feed-title{
+  justify-self: center;
+  align-self: center;
+  margin-right: 10px;
+
+}
+.feed-con{
+  display: flex;
+  flex-direction: row;
+}
+.feed-com{
+  text-align: center;
+}
+.feed-sheet{
+  font-family: "Mitr", sans-serif;
+  padding: 5px;
+  border-radius: 10px;
+  resize: none;
+}
+.feed-sheet.ta10em{
+  height: 10em;
 }
