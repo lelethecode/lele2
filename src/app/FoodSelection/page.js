@@ -68,13 +68,13 @@ function FoodSelection() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Check if all days have a food selected
-        for (let day in selectedFoods) {
-            if (!selectedFoods[day]) {
-                alert(`Please select food for ${day}!`);
-                return;
-            }
-        }
+        // // Check if all days have a food selected
+        // for (let day in selectedFoods) {
+        //     if (!selectedFoods[day]) {
+        //         alert(`Please select food for ${day}!`);
+        //         return;
+        //     }
+        // }
 
         // Send the selected food for all days to the backend
         fetch('https://app-cjhj.onrender.com/choose_food', {
