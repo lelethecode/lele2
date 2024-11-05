@@ -45,6 +45,7 @@ function FoodSelection() {
                         setFoodList(data);
                         // Filter food for each day based on the check value
                         setFilteredFoodLists({
+                            no: data.filter(food => food.check === 0),
                             monday: data.filter(food => food.check === 2),
                             tuesday: data.filter(food => food.check === 3),
                             wednesday: data.filter(food => food.check === 4),
@@ -99,7 +100,7 @@ function FoodSelection() {
 
     return (
         <div className="selection">
-            <h2>Select Your Favorite Food for Each Day</h2>
+            <h2>Chọn món cho từng ngày </h2>
             <form onSubmit={handleSubmit}>
                 {["monday", "tuesday", "wednesday", "thursday", "friday"].map(day => (
                     <div key={day}>
@@ -110,8 +111,8 @@ function FoodSelection() {
                             onChange={(e) => handleChange(day, e.target.value)}
                             className="food-select"
                         >
-                            <option value="">--Select a Food--</option>
-                            <option key = {0} value="">Không Ăn</option>
+                            <option value="">--Chọn Món--</option>
+                            <option key = {'no'} value='khong_an'>Không Ăn</option>
                             {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
                                     {food.name}

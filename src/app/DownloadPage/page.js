@@ -12,7 +12,6 @@ const DownloadPage = () => {
       if (!response.ok) {
         throw new Error('Failed to download file');
       }
-cd
       // Extract the file from response as a Blob and create a downloadable link
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
