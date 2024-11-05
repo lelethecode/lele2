@@ -1,4 +1,5 @@
 // pages/download.js
+"use client";
 import React from 'react';
 
 const DownloadPage = () => {
