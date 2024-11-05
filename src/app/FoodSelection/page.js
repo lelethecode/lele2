@@ -12,6 +12,7 @@ function FoodSelection() {
         friday: []
     });
     const [selectedFoods, setSelectedFoods] = useState({
+        no: "",
         monday: "",
         tuesday: "",
         wednesday: "",
@@ -110,7 +111,7 @@ function FoodSelection() {
                             className="food-select"
                         >
                             <option value="">--Select a Food--</option>
-                            <option value="">Không Ăn</option>
+                            <option key = {0} value="">Không Ăn</option>
                             {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
                                     {food.name}
