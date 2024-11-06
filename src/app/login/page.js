@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   return (
     <div className="selection">
-      <h2>Dăng Nhập</h2>
+      <h2>Đăng Nhập</h2>
       <input
         type="text"
         placeholder="Username"
