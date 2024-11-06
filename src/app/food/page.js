@@ -73,7 +73,7 @@ const FoodForm = () => {
     <div className = "loginhud">
         <form onSubmit={onSubmit}>
                 <div>
-                    <label htmlFor="username" className = "boxtitle">Username: </label>
+                    <label htmlFor="username" className = "boxtitle">Tên Món Ăn: </label>
                     <br/>
                     <input
                         className = "textbox"
@@ -84,7 +84,7 @@ const FoodForm = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="man" className = "boxtitle">Saltiness: </label>
+                    <label htmlFor="man" className = "boxtitle">Độ mặn: </label>
                     <br/>
                     <input
                         className = "textbox"
@@ -95,7 +95,7 @@ const FoodForm = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="ngot" className = "boxtitle">Sweetness: </label>
+                    <label htmlFor="ngot" className = "boxtitle">Độ Ngọt: </label>
                     <br/>
                     <input
                         className = "textbox"
@@ -106,7 +106,7 @@ const FoodForm = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="cay" className = "boxtitle">Spiciness: </label>
+                    <label htmlFor="cay" className = "boxtitle">Độ Cay: </label>
                     <br/>
                     <input
                         className = "textbox"
@@ -117,7 +117,7 @@ const FoodForm = () => {
                     />
                 </div>
                 <br/>
-                <button type="submit" className = "buttons" id = "submitbut">Add Food</button>
+                <button type="submit" className = "buttons" id = "submitbut">Thêm Món Ăn</button>
             </form>
     </div>
     );
