@@ -33,8 +33,8 @@ const DownloadPage = () => {
 
   return (
     <div>
-      <h1>Download Contacts Data</h1>
-      <button onClick={handleDownload}>Download Excel</button>
+      <h1>Tải về Danh sách học sinh bán trú </h1>
+      <button onClick={handleDownload}>Tải Về</button>
     </div>
   );
 };

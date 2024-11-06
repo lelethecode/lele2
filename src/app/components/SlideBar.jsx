@@ -73,8 +73,8 @@ const SlideBar = () => {
             {user ? (
               <>
                 <div className="user-info">
-                  <div className="greeting">Welcome, {user.username}</div> {/* Adjust based on your user data structure */}
-                  <button className="buttons" onClick={handleLogout}>Logout</button>
+                  <div className="greeting">Chào Mừng, {user.username}</div> {/* Adjust based on your user data structure */}
+                  <button className="buttons" onClick={handleLogout}>Đăng Xuất</button>
                 </div>
               </>
             ) : (
