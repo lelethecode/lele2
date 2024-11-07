@@ -64,7 +64,7 @@ function Feedback() {
                         className="feed-sheet"
                     />
                 </div>
-                <button type="submit" className="submit-but">Submit</button>
+                <button type="submit" className="submit-but">Gởi</button>
             </form>
         </div>
     );
