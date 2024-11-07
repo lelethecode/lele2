@@ -27,18 +27,18 @@ const SlideBar = () => {
     }
   }, []);
 
-  useEffect(() => {
-    // Check for the user and if the page has already reloaded
-    if (user && !localStorage.getItem('pageReloaded')) {
-      localStorage.setItem('pageReloaded', 'true'); // Set the reload flag
-      window.location.reload(); // Reload the page
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   // Check for the user and if the page has already reloaded
+  //   if (user && !localStorage.getItem('pageReloaded')) {
+  //     localStorage.setItem('pageReloaded', 'true'); // Set the reload flag
+  //     window.location.reload(); // Reload the page
+  //   }
+  // }, [user]);
 
-  useEffect(() => {
-    // Clean up the reload flag on component mount
-    localStorage.removeItem('pageReloaded');
-  }, []);
+  // useEffect(() => {
+  //   // Clean up the reload flag on component mount
+  //   localStorage.removeItem('pageReloaded');
+  // }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
