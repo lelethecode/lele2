@@ -72,7 +72,7 @@ const SlideBar = () => {
                   <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
                   <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
                   <button className="buttons" onClick={Feedback}>Gửi phản hồi</button>
-
+                  
                 </div>
               </>
             ) : (
