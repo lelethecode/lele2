@@ -273,6 +273,7 @@ button:focus-visible {
   font-size: 20px;
   border-radius: 10px;
   height: 1fr;
+  top: 100px;
   width: 1fr;
   min-width: 100px;
   min-height: 100px;
@@ -697,8 +698,6 @@ font-family: Roboto,Arial;
   color: #ffff;
   background-color: #c9000c;
   border-style: none;
-  height: 35px;
-  width: 50px;
   margin-top: 5px;
   border-radius: 5px;
 }
@@ -769,4 +768,22 @@ font-family: Roboto,Arial;
   margin-top: 40px;
   padding: 20px;
   border-radius: 20px;
+}
+.signin-but{
+  margin-left: 5px;
+  color: #ffff;
+  background-color: #c9000c;
+  border-style: none;
+  height: 35px;
+  width: 50px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.signin-but:hover{
+  border-style: solid;
+  border-color: #ffff;
+}
+.signin-but:active{
+  background-color: #ffff;
+  color: #c9000c;
 }

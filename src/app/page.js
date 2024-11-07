@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="tutor-title">Hướng Dẫn</h1>
         <h2>Đăng Ký</h2>
         <ol>
-          <li>Nhập tên người dùng</li>
+          <li>Nhập họ tên học sinh</li>
           <li>Nhập mật khẩu </li>
           <li>Nhập thư điện tử </li>
           <li>Nhập mức độ vị giác</li>

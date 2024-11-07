@@ -67,8 +67,8 @@ const SlideBar = () => {
               <>
                 <div className="user-info">
                   <div className="greeting">Chào Mừng, {user.username}</div> {/* Adjust based on your user data structure */}
-                  <button className="buttons" onClick={handleLogout}>Đăng Xuất</button>
                   <button className="buttons" onClick={home}>Trang Chủ</button>
+                  <button className="buttons" onClick={handleLogout}>Đăng Xuất</button>
                   <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
                   <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
                   <button className="buttons" onClick={Feedback}>Gửi phản hồi</button>
