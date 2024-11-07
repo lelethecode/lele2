@@ -21,6 +21,15 @@ function FoodSelection() {
     });
     const [userId, setUserId] = useState(null);
 
+    // Mapping of English day names to Vietnamese day names
+    const dayNames = {
+        monday: "Thứ 2",
+        tuesday: "Thứ 3",
+        wednesday: "Thứ 4",
+        thursday: "Thứ 5",
+        friday: "Thứ 6"
+    };
+
     useEffect(() => {
         const storedUserId = localStorage.getItem('user');
         if (storedUserId) {
@@ -30,9 +39,8 @@ function FoodSelection() {
         }
     }, []);
 
-    // Fetch the list of food when the component mounts
     useEffect(() => {
-        if (userId) { // Ensure userId is available before making the request
+        if (userId) { 
             fetch(`https://app-cjhj.onrender.com/get_food_list`) 
                 .then(response => {
                     if (!response.ok) {
@@ -43,7 +51,6 @@ function FoodSelection() {
                 .then(data => {
                     if (data.length > 0) {
                         setFoodList(data);
-                        // Filter food for each day based on the check value
                         setFilteredFoodLists({
                             no: data.filter(food => food.check === 0),
                             monday: data.filter(food => food.check === 2),
@@ -70,15 +77,6 @@ function FoodSelection() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // // Check if all days have a food selected
-        // for (let day in selectedFoods) {
-        //     if (!selectedFoods[day]) {
-        //         alert(`Please select food for ${day}!`);
-        //         return;
-        //     }
-        // }
-
-        // Send the selected food for all days to the backend
         fetch('https://app-cjhj.onrender.com/choose_food', {
             method: 'POST',
             headers: {
@@ -100,11 +98,11 @@ function FoodSelection() {
 
     return (
         <div className="selection">
-            <h2>Chọn món cho từng ngày </h2>
+            <h2>Chọn món cho từng ngày</h2>
             <form onSubmit={handleSubmit}>
                 {["monday", "tuesday", "wednesday", "thursday", "friday"].map(day => (
                     <div key={day}>
-                        <label htmlFor={day}>{day.charAt(0).toUpperCase() + day.slice(1)}:</label>
+                        <label htmlFor={day}>{dayNames[day]}:</label>
                         <select
                             id={day}
                             value={selectedFoods[day]}
@@ -112,7 +110,7 @@ function FoodSelection() {
                             className="food-select"
                         >
                             <option value="">--Chọn Món--</option>
-                            <option key = {'no'} value='khong_an'>Không Ăn</option>
+                            <option key={'no'} value="khong_an">Không Ăn</option>
                             {filteredFoodLists[day].map(food => (
                                 <option key={food.id} value={food.username}>
                                     {food.name}
