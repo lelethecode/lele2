@@ -1,12 +1,10 @@
-// src/LoginPage.jsx
-
 'use client';
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useRouter } from 'next/navigation'; // Import useRouter
+import { useRouter } from 'next/navigation';
 
 const LoginPage = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -14,16 +12,18 @@ const LoginPage = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://app-cjhj.onrender.com/login', {//https://app-cjhj.onrender.com/login
+      const response = await axios.post('https://app-cjhj.onrender.com/login', {
         username: username,
         password: password, 
       });
       setMessage(response.data.message);
       
-      // Redirect to the user page on successful login
       if (response.data.success) { // Assuming the response has a success flag
         localStorage.setItem('user', JSON.stringify(response.data.user)); // Store user data
-        router.push('/user'); // Change '/uwser' to your actual user page route
+        router.push('/user'); // Redirect to user page
+        setTimeout(() => {
+          window.location.reload(); // Reload page after navigation
+        }, 100); // Delay to allow router to finish navigation
       }
     } catch (error) {
       setMessage(error.response.data.message);
