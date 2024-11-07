@@ -16,13 +16,13 @@ const UserPage = () => {
   }
 
   return (
-    <div>
-      <h1>Welcome, {user.username}!</h1>
+    <div className="selection">
+      <h1>Chào Mừng, {user.username}!</h1>
       <p>Email: {user.email}</p>
-      <p>Man: {user.man}</p>
-      <p>Ngot: {user.ngot}</p>
+      <p>Mặn: {user.man}</p>
+      <p>Ngọt: {user.ngot}</p>
       <p>Cay: {user.cay}</p>
-      <p>Favorite Food: {user.favorite_food}</p>
+      <p>Thức ăn yêu thích: {user.favorite_food}</p>
       {/* Add more user-related content here */}
     </div>
   );
