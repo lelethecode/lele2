@@ -697,6 +697,9 @@ font-family: Roboto,Arial;
   color: #ffff;
   background-color: #c9000c;
   border-style: none;
+  height: 35px;
+  width: 50px;
+  margin-top: 5px;
   border-radius: 5px;
 }
 .login-but:hover{
