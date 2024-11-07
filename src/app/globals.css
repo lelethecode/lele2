@@ -273,6 +273,7 @@ button:focus-visible {
   font-size: 20px;
   border-radius: 10px;
   height: 1fr;
+  top: 100px;
   width: 1fr;
   min-width: 100px;
   min-height: 100px;
