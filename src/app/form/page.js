@@ -109,7 +109,7 @@ const ContactForm = () => {
     return (
         <form onSubmit={onSubmit} className="selection">
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username">Tên Tài Khoản:</label>
                 <input
                     type="text"
                     id="username"
@@ -119,7 +119,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Mật Khẩu:</label>
                 <input
                     type="password" // Change to password type for security
                     id="password"
@@ -129,7 +129,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Tài Khoản Email:</label>
                 <input
                     type="email" // Change to email type for validation
                     id="email"
@@ -139,7 +139,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="man">Độ mặn từ 0 tới 100:</label>
+                <label htmlFor="man">Độ mặn từ 1 tới 100:</label>
                 <input
                     type="number" // Change to number type for input
                     id="man"
@@ -150,7 +150,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="ngot">Độ ngot từ 0 tới 100:</label>
+                <label htmlFor="ngot">Độ ngot từ 1 tới 100:</label>
                 <input
                     type="number"
                     id="ngot"
@@ -161,7 +161,7 @@ const ContactForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="cay">Độ cay từ 0 tới 100:</label>
+                <label htmlFor="cay">Độ cay từ 1 tới 100:</label>
                 <input
                     type="number"
                     id="cay"
@@ -171,7 +171,7 @@ const ContactForm = () => {
                     className="food-select"
                 />
             </div>
-            <button type="submit" className="login-but">{updating ? "Update" : "Create"}</button>
+            <button type="submit" className="login-but">{updating ? "Update" : "Tạo"}</button>
         </form>
     );
 };

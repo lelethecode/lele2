@@ -70,7 +70,7 @@ function FoodSelection() {
 
     return (
         <div>
-            <h2>Select Food for Each Day</h2>
+            <h2>Chọn Món Ăn cho thực đơn tuần </h2>
             <form onSubmit={handleSubmit}>
                 {foodList.map(food => (
                     <div key={food.id}>
@@ -78,12 +78,12 @@ function FoodSelection() {
                         <select
                             onChange={(e) => handleChange(food.id, parseInt(e.target.value))}
                         >
-                            <option value="">-- Select Day --</option>
-                            <option value="2">Monday</option>
-                            <option value="3">Tuesday</option>
-                            <option value="4">Wednesday</option>
-                            <option value="5">Thursday</option>
-                            <option value="6">Friday</option>
+                            <option value="">-- Chọn Ngày --</option>
+                            <option value="2">Thứ 2</option>
+                            <option value="3">Thứ 3</option>
+                            <option value="4">Thứ 4</option>
+                            <option value="5">Thứ 5</option>
+                            <option value="6">Thứ 6</option>
                         </select>
                     </div>
                 ))}

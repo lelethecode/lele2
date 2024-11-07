@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   return (
     <div className="selection">
-      <h2>Login</h2>
+      <h2>Đăng Nhập</h2>
       <input
         type="text"
         placeholder="Username"
@@ -47,7 +47,7 @@ const LoginPage = () => {
         onChange={(e) => setPassword(e.target.value)}
         className="food-select"
       />
-      <button onClick={handleLogin} className="login-but">Login</button>
+      <button onClick={handleLogin} className="login-but">Đăng nhập</button>
       <p>{message}</p>
     </div>
   );

@@ -29,13 +29,13 @@ const FavoriteFood = () => {
 
   return (
     <div className="selection">
-      <h1>Favorite Food for the Week</h1>
+      <h1> Món ăn yêu thích của bạn trong tuần </h1>
       <ul>
-        <li>Tuesday (T2): {favoriteFood.t2}</li>
-        <li>Wednesday (T3): {favoriteFood.t3}</li>
-        <li>Thursday (T4): {favoriteFood.t4}</li>
-        <li>Friday (T5): {favoriteFood.t5}</li>
-        <li>Saturday (T6): {favoriteFood.t6}</li>
+        <li>Thứ 2 (T2): {favoriteFood.t2}</li>
+        <li>Thứ 3 (T3): {favoriteFood.t3}</li>
+        <li>Thứ 4 (T4): {favoriteFood.t4}</li>
+        <li>Thứ 5 (T5): {favoriteFood.t5}</li>
+        <li>Thứ 6 (T6): {favoriteFood.t6}</li>
       </ul>
     </div>
   );
