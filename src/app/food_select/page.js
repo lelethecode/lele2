@@ -78,7 +78,7 @@ function FoodSelection() {
                         <select
                             onChange={(e) => handleChange(food.id, parseInt(e.target.value))}
                         >
-                            <option value="">-- Chọn Ngày --</option>
+                            <option value="0">-- Chọn Ngày --</option>
                             <option value="2">Thứ 2</option>
                             <option value="3">Thứ 3</option>
                             <option value="4">Thứ 4</option>
