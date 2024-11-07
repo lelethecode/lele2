@@ -25,8 +25,8 @@ export default function Home() {
         <h2>Chọn món ăn</h2>
         <ul>
           <li>Trong giao diện chọn món, bạn sẽ thấy danh sách các món ăn có sẵn.</li>
-          <li>Nhấp chọn món bạn muốn đămg ký cho các ngày cụ thể</li>
-          <li>Cuối cùng nhấn "Submit" để gởi</li>
+          <li>Nhấp chọn món bạn muốn đăng ký cho các ngày cụ thể</li>
+          <li>Cuối cùng nhấn "Gởi" để gởi</li>
         </ul>
       </div>
     </div>

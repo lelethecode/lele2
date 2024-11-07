@@ -32,7 +32,7 @@ const DownloadPage = () => {
   };
 
   return (
-    <div>
+    <div className="selection">
       <h1>Tải về Danh sách học sinh bán trú </h1>
       <button onClick={handleDownload}>Tải Về</button>
     </div>

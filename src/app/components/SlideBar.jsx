@@ -28,17 +28,10 @@ const SlideBar = () => {
   }, []);
 
   // useEffect(() => {
-  //   // Check for the user and if the page has already reloaded
-  //   if (user && !localStorage.getItem('pageReloaded')) {
-  //     localStorage.setItem('pageReloaded', 'true'); // Set the reload flag
-  //     window.location.reload(); // Reload the page
+  //   if (user) {
+  //     window.location.reload(); 
   //   }
   // }, [user]);
-
-  // useEffect(() => {
-  //   // Clean up the reload flag on component mount
-  //   localStorage.removeItem('pageReloaded');
-  // }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -79,6 +72,8 @@ const SlideBar = () => {
                   <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
                   <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
                   <button className="buttons" onClick={Feedback}>Gửi phản hồi</button>
+                  <button className="buttons" onClick={home}>Trang Chủ</button>
+                  <button className="buttons" onClick={handleLogout}>Đăng Xuất</button>
                 </div>
               </>
             ) : (
@@ -86,11 +81,8 @@ const SlideBar = () => {
                 <button className="buttons" onClick={home}>Trang Chủ</button>
                 <button className="buttons" onClick={handleRegister}>Đăng ký</button>
                 <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
-                
               </>
             )}
-            
-            
           </div>
         </div>
       </div>
