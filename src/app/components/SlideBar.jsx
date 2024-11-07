@@ -27,6 +27,11 @@ const SlideBar = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (user) {
+      window.location.reload(); 
+    }
+  }, [user]);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
