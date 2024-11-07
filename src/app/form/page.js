@@ -171,7 +171,7 @@ const ContactForm = () => {
                     className="food-select"
                 />
             </div>
-            <button type="submit" className="login-but">{updating ? "Update" : "Create"}</button>
+            <button type="submit" className="login-but">{updating ? "Update" : "Tạo"}</button>
         </form>
     );
 };

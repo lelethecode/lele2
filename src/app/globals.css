@@ -30,10 +30,9 @@ body {
   margin: 0;
   background-color: rgb(223 223 225);
   display: flex;
-  position: fixed;
-  place-items: center;
+  justify-content: center;
+  height: 1500px; 
   width: 100%;
-  height: 100%;
 }
 
 h1 {
@@ -97,13 +96,15 @@ h1 {
 .containerbox{
   display: flex;
   background-color:#c9000c;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   justify-content: space-between;
-  top: 0%;
   /* justify-content: space-between; */
   width: 100%;
   height:75px;
-  left:0%;
+
+  z-index: 1000000;
 }
 /* .buttons {
   margin-left: 10px;
@@ -660,6 +661,8 @@ font-family: Roboto,Arial;
   background-color: #ffff;
   border-radius: 10px;
   padding: 20px;
+  position:relative;
+  top: 100px;
 }
 .submit-but{
   color: #ffff;
@@ -716,6 +719,8 @@ font-family: Roboto,Arial;
   padding: 20px;
   border-radius: 10px;
   display: block;
+  position:relative;
+  top: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -740,4 +745,24 @@ font-family: Roboto,Arial;
 }
 .feed-sheet.ta10em{
   height: 10em;
+}
+.home-div{
+  position: relative;
+  top: 150px;
+}
+.tutor-div{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tutor-title{
+  align-self: center;
+  margin-top: 0;
+  font-size: 60px;
+}
+.tutor-div{
+  background-color: #ffff;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 20px;
 }

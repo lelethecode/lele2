@@ -120,7 +120,7 @@ function FoodSelection() {
                         <br />
                     </div>
                 ))}
-                <button type="submit" className="submit-but">Submit</button>
+                <button type="submit" className="submit-but">Gởi</button>
             </form>
         </div>
     );

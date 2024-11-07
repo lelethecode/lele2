@@ -7,22 +7,11 @@ const SlideBar = () => {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(null);
   const [user, setUser] = useState(null);
-  // const barRef = useRef(true);
-
-  // Toggle the menu open/closed
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-//   useEffect(() => {
-//     function handler(event) {
-//         if(!barRef.current?.contains(event.target)) {
-//           setMenuOpen(false);
-//         }
-//     }
-//     window.addEventListener('click', handler);
-//     return () => window.removeEventListener('click', handler);
-// }, [barRef]);
+
 
   const handleLogin = () => router.push("/login");
   const handleRegister = () => router.push("/form");
@@ -31,7 +20,6 @@ const SlideBar = () => {
   const home = () => router.push("/home");
   const Feedback = () => router.push("/feedback");
 
-  // Load user information from local storage
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
@@ -39,11 +27,11 @@ const SlideBar = () => {
     }
   }, []);
 
-  // Handle logout
+
   const handleLogout = () => {
     localStorage.removeItem('user');
     setUser(null);
-    router.push("/login"); // Redirect to login after logout
+    router.push("/login"); 
   };
 
   console.log(user)
