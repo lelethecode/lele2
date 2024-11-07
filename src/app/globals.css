@@ -636,6 +636,7 @@ font-family: Roboto,Arial;
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 5px;
   align-items: center;
 }
 .left-section{

@@ -6,7 +6,7 @@ export default function Home() {
       </div>
       <div className="tutor-div">
         <h1 className="tutor-title">Hướng Dẫn</h1>
-        <h2>Đăng Kí</h2>
+        <h2>Đăng Ký</h2>
         <ol>
           <li>Nhập tên người dùng</li>
           <li>Nhập mật khẩu </li>
@@ -25,8 +25,8 @@ export default function Home() {
         <h2>Chọn món ăn</h2>
         <ul>
           <li>Trong giao diện chọn món, bạn sẽ thấy danh sách các món ăn có sẵn.</li>
-          <li>Nhấp chọn món bạn muốn đămg kí cho các ngày cụ thể</li>
-          <li>Cuối cùng nhấn "Submit" để gửi</li>
+          <li>Nhấp chọn món bạn muốn đămg ký cho các ngày cụ thể</li>
+          <li>Cuối cùng nhấn "Submit" để gởi</li>
         </ul>
       </div>
     </div>
