@@ -7,6 +7,7 @@ const ContactForm = () => {
     const [existingContact, setCurrentContact] = useState({});
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [username, setUsername] = useState(existingContact.username || "");
+    const [clas, setClas] = useState(existingContact.clas || "");
     const [email, setEmail] = useState(existingContact.email || "");
     const [man, setMan] = useState(existingContact.man || "");
     const [ngot, setngot] = useState(existingContact.ngot || "");
@@ -56,7 +57,7 @@ const ContactForm = () => {
         e.preventDefault();
 
         // Validate inputs
-        if (!username || !email || !password) {
+        if (!username || !email || !password || !clas) {
             alert("Username, email, and password are required.");
             return;
         }
@@ -74,6 +75,7 @@ const ContactForm = () => {
 
         const data = {
             username,
+            clas,
             email,
             man: manValue,
             ngot: ngotValue,
@@ -115,6 +117,16 @@ const ContactForm = () => {
                     id="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    className="food-select"
+                />
+            </div>
+            <div>
+                <label htmlFor="clas">Lớp:</label>
+                <input
+                    type="text"
+                    id="clas"
+                    value={clas}
+                    onChange={(e) => setClas(e.target.value)}
                     className="food-select"
                 />
             </div>
