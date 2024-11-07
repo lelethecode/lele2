@@ -20,7 +20,7 @@ const FoodForm = () => {
 
 
         console.log(JSON.stringify(data))
-        const url = "https://app-cjhj.onrender.com/create_food"
+        const url = "https://app-cjhj.onrender.com/create_food" //"https://app-cjhj.onrender.com/create_food"
         const options = {
             method: "POST",
             headers: {
