@@ -9,6 +9,7 @@ export default function Home() {
         <h2>Đăng Ký</h2>
         <ol>
           <li>Nhập họ tên học sinh</li>
+          <li>Nhập Lớp</li>
           <li>Nhập mật khẩu </li>
           <li>Nhập thư điện tử </li>
           <li>Nhập mức độ vị giác</li>
