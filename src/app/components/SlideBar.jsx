@@ -67,11 +67,12 @@ const SlideBar = () => {
               </>
             ) : (
               <>
-                <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
+                <button className="buttons" onClick={home}>Trang Chủ</button>
                 <button className="buttons" onClick={handleRegister}>Đăng ký</button>
+                <button className="buttons" onClick={handleLogin}>Đăng nhập</button>
               </>
             )}
-            <button className="buttons" onClick={home}>Trang Chủ</button>
+            
             <button className="buttons" onClick={handleFoodSelection}>Chọn Món</button>
             <button className="buttons" onClick={handleSelectedFood}>Món ăn bạn đã chọn</button>
             <button className="buttons" onClick={Feedback}>Gửi phản hồi</button>
