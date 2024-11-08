@@ -29,6 +29,7 @@ export default function Home() {
           <li>Nhấp chọn món bạn muốn đăng ký cho các ngày cụ thể</li>
           <li>Cuối cùng nhấn "Gởi" để gởi</li>
         </ul>
+        <h2>*Lưu ý: Vào lúc 23h59 Thứ 5 hằng tuần trang web sẽ tự động khóa lựa chọn, không thể thay đổi sau khi khóa</h2>
       </div>
     </div>
   );
